@@ -1,0 +1,29 @@
+﻿@model jirada.Models.Contact
+@{
+    ViewData["Title"] = "Contact2";
+}
+
+    <form class="border border-light p-5" asp-controller="Home" asp-action="ContactPost2" method="post">
+
+        <p class="h4 mb-4 text-center">Contact us</p>
+
+
+        <input asp-for="Name" class="form-control mb-4" placeholder="Name">
+
+        <input asp-for="Email" class="form-control mb-4" placeholder="E-mail">
+
+        <input asp-for="Subject" class="form-control mb-4" placeholder="Subject">
+
+
+
+        <textarea class="form-control rounded-0" rows="3" placeholder="Message"
+                  asp-for="Message"></textarea>
+
+        <div class="custom-control custom-checkbox mb-4">
+            <input class="custom-control-input" asp-for="SendCopy">
+            <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+        </div>
+
+        <button class="btn btn-info btn-block" type="submit">Send</button>
+    </form>
+
